@@ -18,7 +18,8 @@ fileUpload.addEventListener('change', (event) => {
         data: formData
     }).then( (res) => {
         console.log(res);
-        imgPreview.src = res.data.secure_url;
+        // imgPreview.src = res.data.secure_url;
+        imgPreview.src = `https://res.cloudinary.com/js-with-js/image/upload/c_fill,g_center,h_60,w_60,y_499/fl_cutter,l_hexagon_sample_uxzcsn,y_0,w_60,h_60/w_300,u_JS_01_jb45jn,y_80/v1626099863/${res.data.public_id}`;
     }).catch((error) => {
         console.log(error);
     })
